@@ -29,7 +29,7 @@ class Game:
             AI.childen = AI.find_chdrn('X',self.bd.next_bd_cor)
             AI_mv, AI_cor = AI.move(self.bd.next_bd_cor)
             print(AI_mv)
-            self.bd.state = AI.state
+            self.bd.state = AI_mv
             self.bd.big_board = self.bd.state2board(self.bd.next_bd_cor, AI_mv[self.bd.next_bd_cor[0]][self.bd.next_bd_cor[1]])
             self.bd.show()
             print('You should play on board at ' + str(AI_cor))
